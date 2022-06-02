@@ -1,7 +1,7 @@
 import HotelGrid from '../images/hotelgrid.png'
 
 export default function Intro(props){
-    console.log(props)
+   
    // const hotelgrid='../images/'+{props.img}
     return (
         <section className="section-intro">

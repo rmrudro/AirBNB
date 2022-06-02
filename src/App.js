@@ -7,26 +7,32 @@ import Card from './Components/Card'
 import data from './data'
 
 function App() {
-  console.log(data)
+  // console.log(data)
   const cards = data.map(item => {
     return (
-        <Card 
-            img={item.coverImg}
-            rating={item.stats.rating}
-            reviewCount={item.stats.reviewCount}
-            location={item.location}
-            title={item.title}
-            price={item.price}
-        />
+      <Card
+        key={item.id}
+        item={item}
+      />
+      // img={item.coverImg}
+      //   rating={item.stats.rating}
+      //   reviewCount={item.stats.reviewCount}
+      //   location={item.location}
+      //   title={item.title}
+      //   price={item.price}
+      //   openSpot={item.openSpots}
     )
-}) 
+  })
   return (
-    
+
     <div className="App">
 
       <NavBar></NavBar>
       <Intro></Intro>
-      {cards}
+      <section className='cards-list'>
+        {cards}
+      </section>
+
     </div>
   );
 }
